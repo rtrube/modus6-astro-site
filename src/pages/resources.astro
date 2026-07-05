@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPanel from '../components/HeroPanel.astro';
+import GHLEmbeds from '../components/GHLEmbeds.astro';
+const resources = [
+  ['AI & Automation Readiness Workbook','A private executive workbook for assessing readiness across the Six Pillars.','Request workbook'],
+  ['Six Pillars Framework Overview','A concise overview of the Modus6 Framework and how it supports readiness, prioritization, and roadmap planning.','Coming soon'],
+  ['Shadow AI Risk Checklist','A practical checklist for identifying informal AI usage, data exposure concerns, and governance gaps.','Coming soon'],
+  ['Workflow Friction Scorecard','A simple way to identify manual handoffs, rework, approvals, and repetitive tasks that may be candidates for automation.','Coming soon'],
+  ['Executive Guide to AI Prioritization','A guide for evaluating AI opportunities before buying tools or launching pilots.','Coming soon'],
+];
+---
+<BaseLayout title="Resources | modus6" description="Executive-ready resources for AI readiness, automation prioritization, governance, and workflow improvement.">
+  <HeroPanel eyebrow="Resources" title="Tools to help you prioritize AI and automation with confidence." copy="Executive-ready guides, checklists, scorecards, and frameworks to help your leadership team identify what to automate, what to govern, and where to start." primaryText="Request the Private Workbook" primaryHref="#workbook" secondaryHref="/blog" secondaryText="Read the Blog" />
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        {resources.map(([title, desc, status]) => <div class="card"><h3>{title}</h3><p>{desc}</p><p class="small"><strong>{status}</strong></p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="workbook">
+    <div class="container detail-grid">
+      <div>
+        <div class="eyebrow">Private Workbook</div>
+        <h2>Request the executive readiness workbook.</h2>
+        <p class="lead">The workbook is designed to remain under your control. Your leadership team can complete it privately and decide what to share as part of a readiness review.</p>
+      </div>
+      <div class="form-shell"><GHLEmbeds type="workbook" /></div>
+    </div>
+  </section>
+</BaseLayout>

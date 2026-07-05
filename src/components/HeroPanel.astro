@@ -1,0 +1,26 @@
+---
+const { eyebrow, title, copy, primaryHref = '/contact#calendar', primaryText = 'Schedule a 15-Minute Diagnostic', secondaryHref, secondaryText } = Astro.props;
+---
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+      <h1>{title}</h1>
+      <p class="lead">{copy}</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href={primaryHref}>{primaryText}</a>
+        {secondaryHref && <a class="btn btn-secondary" href={secondaryHref}>{secondaryText}</a>}
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Strategy before software.</h3>
+      <p>modus6 helps leadership teams move from scattered AI interest to a prioritized, governed roadmap.</p>
+      <div class="metric-grid">
+        <div class="metric"><strong>Assess</strong><span>Current state</span></div>
+        <div class="metric"><strong>Prioritize</strong><span>Highest value</span></div>
+        <div class="metric"><strong>Roadmap</strong><span>Action path</span></div>
+        <div class="metric"><strong>Govern</strong><span>Responsible adoption</span></div>
+      </div>
+    </div>
+  </div>
+</section>

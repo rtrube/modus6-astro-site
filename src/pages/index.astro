@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPanel from '../components/HeroPanel.astro';
+const pillars = [
+  ['Strategy','Define priorities, alignment, and transformation goals.'],
+  ['Systems','Map platforms, workflows, handoffs, and infrastructure.'],
+  ['Intelligence','Create reliable, decision-ready organizational insight.'],
+  ['Automation','Identify workflows and tasks that may be improved.'],
+  ['Enablement','Prepare people, governance, training, and adoption.'],
+  ['Optimization','Measure results, refine what works, and scale carefully.'],
+];
+---
+<BaseLayout title="modus6 | Priority Over Hype" description="modus6 helps SMB and mid-market leaders choose the right AI and automation priorities before they buy the wrong tools.">
+  <HeroPanel eyebrow="Priority Over Hype" title="Stop Chasing AI. Start Prioritizing What Moves the Business." copy="modus6 helps leaders identify AI and automation opportunities worth funding first, reduce manual drag, and build a governed roadmap before investing in more tools." secondaryHref="/framework" secondaryText="Explore the Framework" />
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">The Problem</div>
+      <h2>Most companies do not have an AI problem. They have an operating model problem.</h2>
+      <p class="lead">AI adoption often exposes the same issues leaders were already managing: disconnected systems, manual workflows, inconsistent data, unclear ownership, and pressure to modernize without a practical roadmap.</p>
+      <div class="grid grid-3" style="margin-top:32px">
+        <div class="card"><h3>Manual drag</h3><p>Teams move information across spreadsheets, emails, tools, and approval paths because the operating model depends on manual bridges.</p></div>
+        <div class="card"><h3>Scattered AI use</h3><p>Departments experiment with tools without shared governance, business case, or consistent adoption plan.</p></div>
+        <div class="card"><h3>Unclear priorities</h3><p>Leadership knows AI matters, but not which workflows, systems, or use cases deserve funding first.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="eyebrow">How modus6 Helps</div>
+      <h2>Strategy before software.</h2>
+      <p class="lead">We help leadership teams evaluate readiness, validate operational reality, prioritize AI and automation opportunities, and create an executive-ready roadmap.</p>
+      <div class="grid grid-3" style="margin-top:32px">
+        <div class="card"><div class="card-number">01</div><h3>Assess</h3><p>Review strategy, systems, data, workflows, governance, and team readiness.</p></div>
+        <div class="card"><div class="card-number">02</div><h3>Prioritize</h3><p>Identify opportunities based on business value, effort, risk, and readiness.</p></div>
+        <div class="card"><div class="card-number">03</div><h3>Roadmap</h3><p>Build a practical path for what to do first, what to delay, and what to govern.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">The Modus6 Framework</div>
+      <h2>The six operational layers of AI transformation.</h2>
+      <div class="grid grid-3" style="margin-top:32px">
+        {pillars.map(([title, copy]) => <div class="card"><h3>{title}</h3><p>{copy}</p></div>)}
+      </div>
+      <div class="btn-row"><a class="btn btn-primary" href="/framework">See the Six Pillars</a></div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container cta-box">
+      <div class="eyebrow">Readiness Audit</div>
+      <h2>Start with a private executive diagnostic.</h2>
+      <p class="lead">The modus6 Readiness Audit combines a private CXO workbook with manager and staff reality-check inputs to identify readiness gaps, operational friction, and AI opportunities worth prioritizing.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="/readiness-audit">Explore the Readiness Audit</a><a class="btn btn-secondary" href="/contact#calendar">Schedule Diagnostic</a></div>
+    </div>
+  </section>
+</BaseLayout>

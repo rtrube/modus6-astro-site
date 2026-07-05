@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPanel from '../components/HeroPanel.astro';
+import GHLEmbeds from '../components/GHLEmbeds.astro';
+---
+<BaseLayout title="AI & Automation Readiness Audit | modus6" description="A private executive diagnostic and organizational reality check for identifying AI and automation opportunities worth prioritizing first.">
+  <HeroPanel eyebrow="Readiness Audit" title="Find the AI and automation opportunities worth prioritizing first." copy="The modus6 Readiness Audit combines a private CXO workbook with manager and staff reality-check input to identify readiness gaps, workflow friction, governance concerns, and practical opportunities before implementation begins." primaryText="Request a Readiness Review" primaryHref="#request" secondaryHref="/framework" secondaryText="See the Framework" />
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Why It Exists</div>
+      <h2>Leadership perception needs operational reality.</h2>
+      <p class="lead">Executive teams often see one version of the business. Managers and staff experience the daily reality: manual work, rework, disconnected tools, shadow processes, reporting delays, and adoption risks. A strong AI roadmap needs both views.</p>
+      <div class="grid grid-3" style="margin-top:32px">
+        <div class="card"><h3>Private CXO Workbook</h3><p>Executives complete a controlled Excel workbook to assess readiness across the Six Pillars without entering sensitive information into a public quiz.</p></div>
+        <div class="card"><h3>Manager Reality Check</h3><p>Managers identify bottlenecks, capacity constraints, process gaps, and automation opportunities across their teams.</p></div>
+        <div class="card"><h3>Staff Friction Signals</h3><p>Frontline employees surface repetitive tasks, workarounds, duplicate entry, and the places where time disappears.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="eyebrow">What We Evaluate</div>
+      <h2>A structured view across the Six Pillars.</h2>
+      <div class="grid grid-3" style="margin-top:32px">
+        {['Strategy','Systems','Intelligence','Automation','Enablement','Optimization'].map((p) => <div class="card"><h3>{p}</h3><p>Assess readiness, risks, gaps, and opportunities through the lens of {p.toLowerCase()}.</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Deliverables</div>
+      <h2>What your leadership team receives.</h2>
+      <div class="grid grid-2" style="margin-top:32px">
+        {['Six Pillar readiness profile','Leadership perception vs. operational reality comparison','Workflow friction and manual handoff themes','Data readiness and reporting gap summary','Governance and adoption risk review','Prioritized AI and automation opportunity inventory','Recommended quick wins and foundation-first initiatives','Executive-ready roadmap discussion'].map((item) => <div class="card"><h3>{item}</h3></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="eyebrow">Process</div>
+      <h2>Readiness → Reality Check → Prioritization → Roadmap.</h2>
+      <div class="grid grid-4" style="margin-top:32px">
+        <div class="card"><h3>1. Executive Workbook</h3><p>Capture the CXO view of readiness, risks, and opportunity hypotheses.</p></div>
+        <div class="card"><h3>2. Manager & Staff Input</h3><p>Gather operational signals through short online assessments.</p></div>
+        <div class="card"><h3>3. Findings Synthesis</h3><p>Compare perspectives and identify validated friction patterns.</p></div>
+        <div class="card"><h3>4. Roadmap Discussion</h3><p>Prioritize opportunities and define a practical next-step path.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="request">
+    <div class="container detail-grid">
+      <div>
+        <div class="eyebrow">Request Review</div>
+        <h2>Start with a readiness conversation.</h2>
+        <p class="lead">Use this form to request a readiness review. We will follow up to understand your goals, timing, and whether the CXO workbook is the right next step.</p>
+      </div>
+      <div class="form-shell"><GHLEmbeds type="readiness" /></div>
+    </div>
+  </section>
+</BaseLayout>

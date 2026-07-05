@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPanel from '../components/HeroPanel.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).sort((a,b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout title="Blog | modus6" description="Practical thinking on AI strategy, automation, governance, workflow intelligence, and operational transformation.">
+  <HeroPanel eyebrow="Insights" title="Insights for leaders choosing Priority Over Hype." copy="Practical thinking on AI strategy, automation, governance, workflow intelligence, and operational transformation for SMB and mid-market leadership teams." primaryText="Schedule Diagnostic" primaryHref="/contact#calendar" secondaryHref="/resources" secondaryText="Explore Resources" />
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        {posts.map((post) => (
+          <article class="card blog-card">
+            <time datetime={post.data.date.toISOString()}>{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+            <h3><a href={`/blog/${post.slug}`}>{post.data.title}</a></h3>
+            <p>{post.data.description}</p>
+            <p class="small">{post.data.category}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

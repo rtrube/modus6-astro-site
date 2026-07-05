@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+const {
+  title = 'modus6 | Priority Over Hype',
+  description = 'modus6 helps SMB and mid-market leadership teams prioritize the right AI and automation opportunities before they invest in more tools.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="/">modus<span>6</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="/framework">Framework</a>
+          <a href="/readiness-audit">Readiness Audit</a>
+          <a href="/implementation">Implementation</a>
+          <a href="/resources">Resources</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact">Contact</a>
+        </nav>
+        <a class="btn btn-primary nav-cta" href="/contact#calendar">Schedule Diagnostic</a>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">modus<span>6</span></div>
+          <p><strong>Priority Over Hype</strong></p>
+          <p>AI & Automation Advisory for SMB and Mid-Market Leaders.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/framework">Framework</a>
+          <a href="/readiness-audit">Readiness Audit</a>
+          <a href="/implementation">Implementation</a>
+          <a href="/resources">Resources</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://msg.modus6.com/js/form_embed.js"></script>
+  </body>
+</html>

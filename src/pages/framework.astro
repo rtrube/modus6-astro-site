@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPanel from '../components/HeroPanel.astro';
+const pillars = [
+  ['Strategy','Strategy defines the business priorities, leadership alignment, and transformation goals that should guide AI and automation decisions.','Without strategy, AI adoption becomes scattered experimentation. Teams buy tools, test features, and chase ideas without knowing which use cases matter most.',['What business outcomes should AI and automation support?','Where is leadership aligned or misaligned?','Which workflows or use cases deserve priority?','What risks should be considered before investment?'],['Executive alignment','Use-case prioritization','Transformation goals','Clear decision criteria']],
+  ['Systems','Systems are the platforms, workflows, handoffs, and operational infrastructure that run the business.','Disconnected systems create manual bridges. Employees waste time copying data, reconciling spreadsheets, chasing approvals, and fixing errors.',['Which systems are connected?','Where are manual handoffs happening?','What workflows depend on spreadsheets or email?','Where does work get stuck?'],['Systems map','Workflow friction analysis','Integration opportunities','Manual handoff inventory']],
+  ['Intelligence','Intelligence is the ability to turn business data into useful, reliable, decision-ready insight.','AI depends on data quality, structure, access, and context. Fragmented or unreliable data can create more confusion instead of clarity.',['What data exists?','Where does it live?','Is it structured, accessible, and reliable?','Can leaders make confident decisions from it?'],['Data readiness view','Reporting gaps','Decision intelligence opportunities','Single-source-of-truth recommendations']],
+  ['Automation','Automation identifies workflows, decisions, and repetitive tasks that may be improved through AI, workflow automation, agents, or system orchestration.','Not everything should be automated. The right opportunities are high-friction, repeatable, measurable, and tied to business value.',['Which tasks consume the most time?','Which processes are repetitive or rules-based?','Which workflows require classification, routing, or decision support?','Where could automation reduce manual drag?'],['Automation opportunity map','Quick-win candidates','Workflow automation priorities','Implementation sequencing']],
+  ['Enablement','Enablement addresses people, adoption, governance, training, and change readiness.','AI transformation stalls when people do not understand, trust, or use tools responsibly. Governance and adoption should be part of the roadmap from the beginning.',['How ready is the team for change?','Where are employees already using AI informally?','What governance policies are missing?','What training or communication is needed?','Who should be accountable for responsible adoption?'],['Governance recommendations','Workforce readiness plan','Adoption risks','Training and communication priorities','Human-in-the-loop guidance']],
+  ['Optimization','Optimization measures what works, improves what does not, and creates a practical process for scaling AI and automation over time.','AI and automation should not be one-time projects. They should become part of a continuous improvement operating model where results are reviewed, lessons are captured, and successful initiatives are expanded carefully.',['What metrics define success?','How will performance be monitored?','What should be refined after launch?','Which opportunities should scale next?'],['Performance measurement plan','ROI tracking approach','Continuous improvement roadmap','Scaling recommendations']],
+];
+---
+<BaseLayout title="The Modus6 Framework | AI & Automation Advisory" description="The Modus6 Framework helps leadership teams prioritize AI and automation opportunities across Strategy, Systems, Intelligence, Automation, Enablement, and Optimization.">
+  <HeroPanel eyebrow="Priority Over Hype" title="The Framework for Turning AI Confusion Into Operational Clarity" copy="The Modus6 Framework helps SMB and mid-market leadership teams prioritize the right AI and automation opportunities across six operational layers: Strategy, Systems, Intelligence, Automation, Enablement, and Optimization." primaryText="Book a Readiness Audit" primaryHref="/readiness-audit" secondaryHref="#pillars" secondaryText="See the Six Pillars" />
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Start With Priorities</div>
+      <h2>AI transformation does not start with tools.</h2>
+      <p class="lead">Most companies do not struggle with AI because they lack tools. They struggle because they lack alignment, connected systems, reliable data, governance, and a clear roadmap. The Modus6 Framework gives leadership teams a structured way to evaluate where the business is today, where manual drag exists, which opportunities are worth funding, and what must happen before implementation begins.</p>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="pillars">
+    <div class="container">
+      <div class="eyebrow">Six Pillars</div>
+      <h2>The six operational layers of AI transformation.</h2>
+      <p class="lead">A practical framework for identifying operational friction, strengthening systems, improving data readiness, and prioritizing AI and automation opportunities before implementation begins.</p>
+      <div class="grid grid-3" style="margin-top:32px">
+        {pillars.map(([name, meaning]) => <div class="card"><h3>{name}</h3><p>{meaning}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {pillars.map(([name, meaning, why, questions, outcomes]) => (
+        <div class="pillar-detail">
+          <div class="detail-grid">
+            <div>
+              <div class="eyebrow">{name}</div>
+              <h2>{name}</h2>
+              <p><strong>What it means:</strong> {meaning}</p>
+              <p><strong>Why it matters:</strong> {why}</p>
+            </div>
+            <div class="grid grid-2">
+              <div class="card">
+                <h3>Questions we evaluate</h3>
+                <ul class="check-list">{questions.map((q) => <li>{q}</li>)}</ul>
+              </div>
+              <div class="card">
+                <h3>Example outcomes</h3>
+                <ul class="check-list">{outcomes.map((o) => <li>{o}</li>)}</ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="eyebrow">Framework in Action</div>
+      <h2>From fragmented experiments to a prioritized roadmap.</h2>
+      <div class="grid grid-3" style="margin-top:32px">
+        <div class="card"><div class="card-number">01</div><h3>Assess</h3><p>Evaluate current strategy, systems, data, workflows, governance, and team readiness.</p><p><strong>Outcome:</strong> Clear current-state view.</p></div>
+        <div class="card"><div class="card-number">02</div><h3>Prioritize</h3><p>Identify which AI and automation opportunities are worth pursuing first based on value, risk, effort, and readiness.</p><p><strong>Outcome:</strong> Focused opportunity list.</p></div>
+        <div class="card"><div class="card-number">03</div><h3>Roadmap</h3><p>Create an executive-ready roadmap showing what to do first, what to delay, what to govern, and what to fund.</p><p><strong>Outcome:</strong> Practical implementation path.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Executive Pressure</div>
+      <h2>Built for leaders who need clarity before they commit budget.</h2>
+      <div class="grid grid-3" style="margin-top:32px">
+        {['Rising headcount without matching productivity','Manual workflows slowing growth','Shadow AI creating risk','Disconnected systems creating rework','Unclear ROI from AI tools','Pressure to present an AI roadmap to leadership or the board'].map((item) => <div class="card"><h3>{item}</h3></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container cta-box">
+      <h2>Ready to find the AI and automation opportunities worth prioritizing?</h2>
+      <p class="lead">Before you invest in another tool, get a structured view of your workflows, risks, systems, data readiness, and highest-value opportunities.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="/readiness-audit">Book a Readiness Audit</a><a class="btn btn-secondary" href="/readiness-audit">Explore the Readiness Audit</a></div>
+    </div>
+  </section>
+</BaseLayout>

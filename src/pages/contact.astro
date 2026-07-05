@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPanel from '../components/HeroPanel.astro';
+import GHLEmbeds from '../components/GHLEmbeds.astro';
+---
+<BaseLayout title="Contact | modus6" description="Contact modus6 to discuss AI readiness, automation priorities, workflow friction, and roadmap planning.">
+  <HeroPanel eyebrow="Contact" title="Ready to prioritize the right AI and automation opportunities?" copy="Use the calendar or contact form below to start a conversation about readiness, workflow friction, governance, data, and roadmap planning." primaryText="Schedule Diagnostic" primaryHref="#calendar" secondaryHref="#contact-form" secondaryText="Send a Message" />
+
+  <section class="section" id="calendar">
+    <div class="container detail-grid">
+      <div>
+        <div class="eyebrow">Calendar</div>
+        <h2>Schedule a 15-minute diagnostic.</h2>
+        <p class="lead">Use this call to discuss your current AI and automation priorities, what prompted the conversation, and whether the Readiness Audit is the right next step.</p>
+      </div>
+      <div class="form-shell"><GHLEmbeds type="calendar" /></div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="contact-form">
+    <div class="container detail-grid">
+      <div>
+        <div class="eyebrow">Message</div>
+        <h2>Send a message.</h2>
+        <p class="lead">Share a short note about what you are trying to evaluate, improve, or prioritize.</p>
+      </div>
+      <div class="form-shell"><GHLEmbeds type="contact" /></div>
+    </div>
+  </section>
+</BaseLayout>

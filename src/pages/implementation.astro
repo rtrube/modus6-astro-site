@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPanel from '../components/HeroPanel.astro';
+---
+<BaseLayout title="Implementation Support | modus6" description="Strategy-led AI and automation implementation support, coordinated directly or through trusted technical partners.">
+  <HeroPanel eyebrow="Implementation" title="Strategy-led. Implementation-capable." copy="modus6 leads the strategy, readiness, roadmap, governance, and advisory process. When clients move into technical implementation, we coordinate directly or through trusted specialist partners to help turn the roadmap into working systems." primaryText="Schedule Diagnostic" primaryHref="/contact#calendar" secondaryHref="/readiness-audit" secondaryText="Explore the Audit" />
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Our Role</div>
+      <h2>We help leaders move from roadmap to responsible execution.</h2>
+      <p class="lead">The right implementation path depends on the readiness findings, the systems already in place, the data available, and the internal capacity of the organization. modus6 helps leadership teams sequence work carefully before committing to tools, vendors, or technical build decisions.</p>
+      <div class="grid grid-3" style="margin-top:32px">
+        <div class="card"><h3>Roadmap ownership</h3><p>Translate readiness findings into a staged roadmap aligned to business value, readiness, and risk.</p></div>
+        <div class="card"><h3>Governance guidance</h3><p>Define usage guidance, ownership, approval paths, and human-in-the-loop expectations.</p></div>
+        <div class="card"><h3>Partner coordination</h3><p>Coordinate with internal teams or trusted technical partners when specialized implementation support is needed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container cta-box">
+      <div class="eyebrow">Preferred Technical Implementation Partner</div>
+      <h2>Tatras Data</h2>
+      <p class="lead">For deeper AI/ML, generative AI, intelligent automation, RAG, document processing, agentic systems, and custom implementation work, modus6 collaborates with Tatras Data, a specialist AI/ML implementation firm.</p>
+      <p>modus6 remains the lead advisor for strategy, roadmap, governance, and executive alignment. Tatras Data supports selected technical build initiatives when the roadmap calls for deeper engineering, data science, or AI implementation expertise.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Implementation Areas</div>
+      <h2>Common paths after the readiness audit.</h2>
+      <div class="grid grid-3" style="margin-top:32px">
+        {['Workflow automation','Document processing','Knowledge retrieval and RAG','Executive reporting and decision intelligence','AI governance and usage guidelines','Agent-assisted workflows','Data readiness improvements','Systems integration planning','Pilot design and measurement'].map((item) => <div class="card"><h3>{item}</h3></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container cta-box">
+      <h2>Implementation starts with prioritization.</h2>
+      <p class="lead">Before building or buying, clarify which opportunities have the strongest business case, readiness, and implementation path.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="/readiness-audit">Start With the Audit</a></div>
+    </div>
+  </section>
+</BaseLayout>
